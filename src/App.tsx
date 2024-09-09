@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CompanyInfo from "./components/CompanyInfo/CompanyInfo";
+import Counter from "./components/Counter/Counter";
+import Posts from "./components/Posts/Posts";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Welcome to unit testing ReactJS app!!!</h1>
+      <p>This is a SAMPLE app to learn unit testing in ReactJS</p>
+
+      <h2>Testing Props</h2>
+      <CompanyInfo
+        companyName="Ford"
+        foundedYear="1900"
+        employeesCount="1000000"
+      />
+
+      <h2>Testing States and Events</h2>
+      <Counter />
+
+      <h2>Testing API Calls</h2>
+      <Posts />
     </div>
   );
 }
